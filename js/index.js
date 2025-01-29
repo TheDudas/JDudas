@@ -24,8 +24,7 @@ $(document).ready(function () {
   
       //convert the response to JSON
       const data = await response.json();
-      // console.log({ data });
-  
+      
       //return the data
       return data;
     };
@@ -49,8 +48,7 @@ $(document).ready(function () {
       return data;
     };
   
-    /**Other functions to handle CRUD requests */
-  
+    
     //create render function to retrieve data from the server and render it to the page
     const render = async () => {
       //fetch all tasks from the server
@@ -117,7 +115,7 @@ $(document).ready(function () {
     });
   
     //add event listener to the delete button
-    //Need to use event delegation since the delete button is dynamically created
+
     $(document).on("click", ".deleteTask", async function () {
   
       // Get the id of the task to be deleted
@@ -134,7 +132,7 @@ $(document).ready(function () {
     });
   
     //add event listener to the toggleTask button
-    //Need to use event delegation since the toggleTask button is dynamically created
+    
     $(document).on("click", ".toggleTask", async function () {
       // Get the id of the task to be deleted
       const id = $(this).data("index");
